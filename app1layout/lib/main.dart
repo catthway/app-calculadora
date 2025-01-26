@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'calculadora.dart';
+
 void main() {
   runApp(const App());
 }
@@ -16,7 +18,7 @@ class App extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(title: 'Programa Layout'),
+      home: const HomePage(title: 'Calculadora'),
     );
   }
 }
@@ -47,11 +49,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Expanded(
-              child: Container(
-                alignment: Alignment.center,
-                // color: Colors.amber,
-                child: const Text('Layout Superior'),
-              ),
+              child: Container(),
             ),
             Expanded(
               flex: 7,
@@ -70,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: Colors.grey.shade200,
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(
                           color: Colors.black,
@@ -84,7 +82,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ],
                       ),
-                      child: const Text('Meu Aplicativo'),
+                      child: const Calculadora(),
                     ),
                   ),
                   Expanded(
@@ -100,9 +98,9 @@ class _HomePageState extends State<HomePage> {
             Expanded(
               flex: 2,
               child: Container(
-                alignment: Alignment.center,
+                //alignment: Alignment.center,
                 //color: Colors.blue,
-                child: const Text('Layout Inferior'),
+                //child: const Text('Layout Inferior'),
               ),
             ),
           ],
